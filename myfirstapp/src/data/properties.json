@@ -1,0 +1,37 @@
+[
+    {
+    "ID" : 1,
+    "type" : "House",
+    "name" :"Brila House",
+    "price" : 12000
+  },
+  {
+    "ID" : 2,
+    "type" : "House",
+    "name" :"Mallisa House",
+    "price" : 13000
+  },
+  {
+    "ID" : 3,
+    "type" : "Appartment",
+    "name" :"Ocean Apartment",
+    "price" : 14000
+  },
+  {
+    "ID" : 4,
+    "type" : "Duplex",
+    "name" :"Melissa Duplex",
+    "price" : 20000
+  },
+  {
+    "ID" : 5,
+    "type" : "House",
+    "name" :"Naigara House",
+    "price" : 12000
+  },
+  {
+    "ID" : 6,
+    "type" : "House",
+    "name" :"Vintage House",
+    "price" : 12000
+  }]
