@@ -2,3 +2,9 @@
   property-details works !
   Selected property has an id: {{PropertyID}}
 </p>
+<button type="button" class="btn btn-primary" (click)="goNext()">Go to the next property</button>
+<br/>
+<button type="button" class="btn btn-primary" [routerLink]="['/property-details/1']" routerLinkActive="router-link-active" >1</button>
+<button type="button" class="btn btn-primary" [routerLink]="['/property-details/2']" routerLinkActive="router-link-active" >2</button>
+<button type="button" class="btn btn-primary" [routerLink]="['/property-details/3']" routerLinkActive="router-link-active" >3</button>
+<button type="button" class="btn btn-primary" [routerLink]="['/property-details/','4']" routerLinkActive="router-link-active" >4</button>

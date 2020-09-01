@@ -15,6 +15,9 @@
 .img-prop{
     position: relative;
     overflow: hidden;
+    width: 100%;
+    height: 60%;
+    border-radius: 5px 5px 5px 5px;
     
   }
 
@@ -32,4 +35,9 @@
   opacity: 1;
   transition: all 0.4s ease-out;
   bottom: 0%;
+}
+.card {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
 }

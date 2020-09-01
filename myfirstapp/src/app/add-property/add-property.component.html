@@ -1,4 +1,33 @@
-<p>
+<!-- <p>
   add-property works!
   <button type="button" (click)="onBack()" class="btn btn-primary">Back</button>
-</p>
+</p> -->
+<div class='card col-12'>
+  <div class='card-header text-center'>
+    Add New Property
+  </div>
+  <div class='body'>
+    <form ngSubmit='onSubmit(Form)' #Form='ngForm'> 
+      <div class="form-group col-12">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" ngModel name = 'name'>
+       </div>
+
+       <div class="form-group col-12">
+        <label for="type">Type</label>
+        <input type="text" class="form-control" ngModel name ='type'>
+       </div>
+
+       <div class="form-group col-12">
+        <label for="price">Price</label>
+        <input type="text" class="form-control" ngModel name ='price'>
+       </div>
+      <div class="col-12">
+       <button type="submit" class="btn btn-success mr-2">Submit</button>
+       <button type="reset" class="btn btn-warning">Reset</button>
+      </div> 
+      </form>
+  </div>
+
+
+</div>

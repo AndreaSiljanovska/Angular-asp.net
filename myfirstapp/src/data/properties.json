@@ -1,37 +1,49 @@
 [
     {
+    "SellRent" : 2,
     "ID" : 1,
     "type" : "House",
     "name" :"Brila House",
-    "price" : 12000
+    "price" : 12000,
+    "image" : "house-default"
   },
   {
+    "SellRent" : 1,
     "ID" : 2,
     "type" : "House",
     "name" :"Mallisa House",
-    "price" : 13000
+    "price" : 13000,
+    "image" : "house-2"
   },
   {
+    "SellRent" : 2,
     "ID" : 3,
-    "type" : "Appartment",
+    "type" : "Apartment",
     "name" :"Ocean Apartment",
-    "price" : 14000
+    "price" : 14000,
+    "image" : "house-3"
   },
   {
+    "SellRent" : 1,
     "ID" : 4,
     "type" : "Duplex",
     "name" :"Melissa Duplex",
-    "price" : 20000
+    "price" : 20000,
+    "image" : "house-4"
   },
   {
+    "SellRent" : 2,
     "ID" : 5,
     "type" : "House",
     "name" :"Naigara House",
-    "price" : 12000
+    "price" : 12000,
+    "image" : "house-5"
   },
   {
+    "SellRent" : 1,
     "ID" : 6,
     "type" : "House",
     "name" :"Vintage House",
-    "price" : 12000
+    "price" : 12000,
+    "image" : "house-6"
   }]

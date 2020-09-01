@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http'
-import { Routes, RouterModule } from '@angular/router'
+import { HttpClientModule } from '@angular/common/http';
+import { Routes, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { PropertyListComponent } from './property-list/property-list.component';
 import { AddPropertyComponent } from './add-property/add-property.component';
 import { HousingService } from './services/housing.service';
 import { PropertyDetailsComponent } from './property-details/property-details.component';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
   {
@@ -29,6 +31,10 @@ const appRoutes: Routes = [
   {
     path: 'add-property', 
     component: AddPropertyComponent
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
   }
 ]
 
@@ -45,7 +51,9 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes)
+    
   ],
   providers: [HousingService],
   bootstrap: [AppComponent]
