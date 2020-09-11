@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,11 +12,12 @@ import { PropertyListComponent } from './property-list/property-list.component';
 import { AddPropertyComponent } from './add-property/add-property.component';
 import { HousingService } from './services/housing.service';
 import { PropertyDetailsComponent } from './property-details/property-details.component';
-import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   {
-    path:'rent-property',
+    path: 'rent-property',
     component: PropertyListComponent
   },
   {
@@ -24,22 +25,21 @@ const appRoutes: Routes = [
     component: PropertyDetailsComponent
   },
   {
-    path:'',
+    path: '',
     component: PropertyListComponent
   },
-  
   {
-    path: 'add-property', 
+    path: 'add-property',
     component: AddPropertyComponent
   },
   {
     path: '**',
     component: PageNotFoundComponent
   }
-]
+];
 
 @NgModule({
-  declarations: [						
+  declarations: [
     AppComponent,
       NavigationBarComponent,
       PropertyCardsComponent,
@@ -51,9 +51,9 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
     FormsModule,
     RouterModule.forRoot(appRoutes)
-    
   ],
   providers: [HousingService],
   bootstrap: [AppComponent]

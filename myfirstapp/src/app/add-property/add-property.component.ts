@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { NgForm } from '@angular/forms';
+import { FormControl, FormGroup, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-add-property',
@@ -8,22 +8,28 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./add-property.component.css']
 })
 export class AddPropertyComponent implements OnInit {
+  signUpForm: FormGroup;
+  constructor(private router: Router) { }
 
-  constructor(private router:Router) { }
-
+  // tslint:disable-next-line:typedef
   ngOnInit() {
+    this.signUpForm = new FormGroup({
+      name: new FormControl(null),
+      type: new FormControl(null),
+      price: new FormControl(null)
+    });
   }
 
-  onBack() 
+  // tslint:disable-next-line:typedef
+  onBack()
   {
-  
     this.router.navigate(['/']);
   }
 
-  onSubmit(Form:NgForm)
+  // tslint:disable-next-line:typedef
+  onSubmit()
   {
-    console.log('Congrats! You submited.')
-    console.log(Form)
+    console.log('Congrats! You submited.');
   }
 
 }

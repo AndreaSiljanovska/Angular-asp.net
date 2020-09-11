@@ -1,26 +1,23 @@
-<!-- <p>
-  add-property works!
-  <button type="button" (click)="onBack()" class="btn btn-primary">Back</button>
-</p> -->
+<ng-container >
 <div class='card col-12'>
   <div class='card-header text-center'>
     Add New Property
   </div>
   <div class='body'>
-    <form ngSubmit='onSubmit(Form)' #Form='ngForm'> 
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()"> 
       <div class="form-group col-12">
         <label for="name">Name</label>
-        <input type="text" class="form-control" ngModel name = 'name'>
+        <input type="text" class="form-control" formControlName="name">
        </div>
 
        <div class="form-group col-12">
         <label for="type">Type</label>
-        <input type="text" class="form-control" ngModel name ='type'>
+        <input type="text" class="form-control" formControlName="type">
        </div>
 
        <div class="form-group col-12">
         <label for="price">Price</label>
-        <input type="text" class="form-control" ngModel name ='price'>
+        <input type="text" class="form-control" formControlName="price">
        </div>
       <div class="col-12">
        <button type="submit" class="btn btn-success mr-2">Submit</button>
@@ -31,3 +28,5 @@
 
 
 </div>
+<p>{{ this.signUpForm.get('name').value }}</p>
+</ng-container>
